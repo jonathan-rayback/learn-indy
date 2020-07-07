@@ -1,0 +1,10 @@
+version: '3.8'
+services: 
+  indy-cli:
+    build: .
+    image: jrayback/indy-cli:latest
+    container_name: indy-cli
+    volumes:
+    - ".:/root"
+    stdin_open: true
+    tty: true
