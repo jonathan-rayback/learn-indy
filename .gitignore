@@ -102,3 +102,15 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Don't track the wallet keys
+keys-for-wallets.txt
+
+# Don't track the wallet
+.indy_client/
+
+# Artifacts of working in the container root dir
+.bash_history
+
+# Artifact of using VS Code remote container development
+.vscode-server/
