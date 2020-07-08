@@ -114,3 +114,6 @@ keys-for-wallets.txt
 
 # Artifact of using VS Code remote container development
 .vscode-server/
+
+# Don't track my personal .gitconfig
+.gitconfig
