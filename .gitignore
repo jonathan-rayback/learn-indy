@@ -6,3 +6,4 @@ keys-for-wallets.txt
 .vscode-server
 .config
 .ssh
+.cache
