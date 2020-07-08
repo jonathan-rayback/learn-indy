@@ -6,5 +6,6 @@ services:
     container_name: indy-sdk
     volumes:
     - ".:/root"
+    - "./src:/root/src"
     stdin_open: true
     tty: true
