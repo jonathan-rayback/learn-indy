@@ -5,7 +5,11 @@ services:
     image: jrayback/indy-sdk:latest
     container_name: indy-sdk
     volumes:
-    - ".:/root"
+    - "./.indy_client:/root/.indy_client"
+    - "./.git:/root/.git"
+    - "./.gitignore:/root/.gitignore"
+    - "./.gitconfig:/root/.gitconfig"
     - "./src:/root/src"
     stdin_open: true
     tty: true
+    command: /bin/bash
