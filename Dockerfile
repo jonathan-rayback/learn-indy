@@ -13,10 +13,13 @@ RUN apt-get update && apt-get install -y \
   gnupg \
   less
 
-# get indy-cli
+# get indy-cli, libindy, libnullpay, and libvcx
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
 RUN add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable"
 RUN apt-get update && apt-get install -y \
-  indy-cli
+  indy-cli \
+  libindy \
+  libnullpay \
+  libvcx
 
 CMD [ "/bin/bash" ]

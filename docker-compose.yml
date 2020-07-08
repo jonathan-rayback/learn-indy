@@ -1,9 +1,9 @@
 version: '3.8'
 services: 
-  indy-cli:
+  indy-sdk:
     build: .
-    image: jrayback/indy-cli:latest
-    container_name: indy-cli
+    image: jrayback/indy-sdk:latest
+    container_name: indy-sdk
     volumes:
     - ".:/root"
     stdin_open: true
