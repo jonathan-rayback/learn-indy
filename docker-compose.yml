@@ -1,0 +1,16 @@
+version: '3.8'
+services: 
+  indy-sdk:
+    build: .
+    image: jrayback/indy-sdk:latest
+    container_name: indy-sdk
+    volumes:
+    - "./.indy_client:/root/.indy_client"
+    - "./.git:/root/.git"
+    - "./.gitignore:/root/.gitignore"
+    - "./.gitconfig:/root/.gitconfig"
+    - "./src:/root/src"
+    - "./.ssh:/root/.ssh"
+    stdin_open: true
+    tty: true
+    command: /bin/bash
