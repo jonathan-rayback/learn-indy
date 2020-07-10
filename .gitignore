@@ -9,3 +9,4 @@ keys-for-wallets.txt
 .cache
 .gnupg
 .npm
+.node_repl_history
