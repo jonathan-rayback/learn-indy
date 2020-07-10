@@ -7,3 +7,5 @@ keys-for-wallets.txt
 .config
 .ssh
 .cache
+.gnupg
+.npm
