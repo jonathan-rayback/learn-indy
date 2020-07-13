@@ -10,3 +10,4 @@ keys-for-wallets.txt
 .gnupg
 .npm
 .node_repl_history
+node_modules
