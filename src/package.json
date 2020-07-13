@@ -1,0 +1,10 @@
+{
+  "name": "my-indy-sdk-app",
+  "description": "",
+  "version": "0.0.1",
+  "license": "private",
+  "main": "test.js",
+  "dependencies": {
+    "indy-sdk": "latest"
+  }
+}
