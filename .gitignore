@@ -2,6 +2,7 @@ keys-for-wallets.txt
 .indy_client
 .gitconfig
 .bashrc
+.bash_history
 .profile
 .vscode-server
 .config
