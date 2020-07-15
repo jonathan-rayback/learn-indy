@@ -45,8 +45,8 @@ ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
 
 ENV NVM_DIR /usr/local/.nvm
-# need to use v8 to compile indy-sdk
-ENV NODE_VERSION v8
+# need to use v10 to compile indy-sdk
+ENV NODE_VERSION v10
 
 # install nvm
 RUN git clone https://github.com/creationix/nvm.git $NVM_DIR && \
