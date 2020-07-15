@@ -6,5 +6,11 @@
   "main": "test.js",
   "dependencies": {
     "indy-sdk": "latest"
+  },
+  "devDependencies": {
+    "standard": "latest"
+  },
+  "standard": {
+    
   }
 }
