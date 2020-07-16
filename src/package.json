@@ -5,12 +5,10 @@
   "license": "private",
   "main": "test.js",
   "dependencies": {
+    "node-gyp" : "*",
     "indy-sdk": "latest"
   },
   "devDependencies": {
-    "standard": "latest"
-  },
-  "standard": {
-    
+    "standard": "*"
   }
 }

@@ -26,7 +26,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
 # get indy-cli, libindy, libnullpay, and libvcx
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88
 RUN add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable"
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
+RUN apt-get update && \
   apt-get install -y \
     indy-cli \
     libindy \
@@ -35,7 +35,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 # lets subdirectories mounted as separate volumes find the .git file
-ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+# ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
 # for nvm installation I borrowed from this Dockerfile:
 # https://hub.docker.com/r/theseg/docker-ubuntu-nvm/dockerfile
@@ -69,5 +69,12 @@ RUN echo "source ${NVM_DIR}/nvm.sh" > $HOME/.bashrc && \
 
 ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
 
-# install node-gyp and LibIndy Node Wrapper
-CMD npm install -g node-gyp && npm install
+WORKDIR /root/src
+
+# check node and nvm
+RUN echo $(node -v) && echo $(npm -v)
+
+# install dependencies and wrapper
+CMD ["npm", "install"]
+
+WORKDIR /root
